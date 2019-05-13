@@ -1,0 +1,9 @@
+1.innodb_log_files_in_group:DB中设置几组事务日志，默认是2
+2.innodb_log_group_home_dir:事务日志存放目录,不设置，ib_logfile0...存在在数据文件目录下
+3.redo log => ib_logfile0
+4.undo log => ibdata
+
+5.innodb_flush_log_at_trx_commit 参数解析(0,1,2)，默认为1
+	0.每秒写入日志文件，并写入到磁盘文件中
+	1.commit每次提交时，写入log fil中，并提交到磁盘文件中
+	2.commit每次提交时写入log file,每秒写入磁盘中
