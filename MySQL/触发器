@@ -1,0 +1,18 @@
+创建触发器
+	create trigger [名称] [执行时间] [执行的动作点] 
+		on [表名] for each row [函数 或者动作]
+		
+	执行时间:before, after
+	执行的动作点:insert update, delter
+	函数:begin end
+	动作:update, insert
+	
+	create triger 
+		login_trigger_before 	//触发器名称
+		before 					//执行时间
+		insert onlogin 			//执行的动作点
+	for each row			
+	begin
+		//代码区域
+		
+	end;
