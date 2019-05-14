@@ -1,0 +1,15 @@
+docker inspect 获取容器/镜像的元数据
+
+语法
+	docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+	
+OPTIONS说明：
+	-f 指定返回值的模板文件
+	-s 显示总的文件大小
+	--type 为指定类型返回JSON
+	
+获取镜像mysql:5.6的元信息
+	docker inspect mysql:5.6
+	
+获取正在运行的容器mymysql的 IP。
+	docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' mymysql

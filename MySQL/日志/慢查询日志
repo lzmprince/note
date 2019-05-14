@@ -1,0 +1,26 @@
+慢查询日志中记录的是执行时间较长的query
+
+long_query_time	最长时间
+min_examined_row_limit条 最大条数
+
+慢查询日志开启
+	通过设置log-slow_queries[=file_name]选项开启
+	
+查看慢查询是否开启
+	show variables like "log_slow_queries";
+
+查看慢查询日志的定义：
+	show global variables like '%slow_query_log%';
+
+查看long_query_time设置时间
+	show global variables like '%long%';
+
+查看具体信息
+	show variables like "%slow%";
+	slow_query_log： off关闭状态 on开启状态
+	slow_query_log_file 慢查询日志存放地点
+
+开启慢查询
+	slow_query_log
+	slow_query_log_file=[file_name] //文件地址
+	long_query_time=2 	//最大等待时间

@@ -1,0 +1,16 @@
+docker logs 获取容器的日志
+
+语法
+docker logs [OPTIONS] CONTAINER
+
+OPTIONS
+	-f 跟踪日志输出
+	--slice 显示某个开始时间的所有日志
+	-t 显示时间戳
+	--tail 仅列出最新N条容器日志
+
+跟踪查看容器mynginx的日志输出
+	docker logs -f mynginx
+	
+查看容器mynginx从2016年7月1日后的最新10条日志
+	docker logs --since="2016-07-01" --tail=10 mynginx

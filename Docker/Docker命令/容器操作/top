@@ -1,0 +1,12 @@
+docker top 查看容器中运行的进程信息，支持ps命令参数
+容器运行时不一定有/bin/bash终端来交互top命令，而且容器还不一定有top命令，
+可以使用docker top是实现查看容器中正在运行的进程
+
+语法
+docker top [OPTIONS] CONTAINER [ps OPTIONS]
+
+查看容器mymysql的进程信息
+	docker top mymysql
+
+查看所有运行容器的进程信息
+	for i in  `docker ps |grep Up|awk '{print $1}'`;do echo \ &&docker top $i; done

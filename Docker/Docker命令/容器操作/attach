@@ -1,0 +1,4 @@
+docker attach 连接到正在运行的容器
+
+容器mynginx将访问日志指到标准输出，连接到容器查看访问信息
+docker attach --sig-proxy=false mynginx

@@ -1,0 +1,6 @@
+日志文件主要包括
+	1.错误日志(Error Log)
+	2.二进制日志(Binary Log)
+	3.事务日志(InnoDB redo log & undo Log)
+	4.慢查询日志(Slow Query Log)
+	5.查询日志(Query Log)
