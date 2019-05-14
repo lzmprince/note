@@ -1,0 +1,14 @@
+docker start 启动一个或多个已经被停止的容器
+docker stop 停止一个运行中的容器
+docker restart 重启容器
+
+实例
+
+启动已被停止的容器myrunoob
+docker start myrunoob
+
+停止运行中的容器myrunoob
+docker stop myrunoob
+
+重启容器myrunoob
+docker restart myrunoob

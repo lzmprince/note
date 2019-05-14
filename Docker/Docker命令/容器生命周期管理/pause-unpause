@@ -1,0 +1,13 @@
+docker pause 暂停容器中所有的进程
+docker unpause 恢复容器中所有的进程
+
+语法	CONTAINER(容器)
+	docker pause [OPTIONS] CONTAINER [CONTAINER...]
+	docker unpause [OPTIONS] CONTAINER [CONTAINER...]
+
+实例
+暂停数据库容器db01提供服务。
+	docker pause db01
+
+恢复数据库容器db01提供服务。
+	docker unpause db01
