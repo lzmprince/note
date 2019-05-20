@@ -1,0 +1,30 @@
+定义命名空间
+	如果一个文件中包含命名空间，它必须在其它所有代码之前申明命名空间
+	namespace MyPorject;	//定义代码在'MyPorject'命名空间中
+	
+子命名空间
+	与目录和文件的关系很像，因此命名空间的名字可以使用分层次的方式定义
+	namespace MyPorject\Sub\Level;
+	
+命名空间的使用
+	$a = new foo();		
+	如果当前的命名空间是currentnamespace,foo将被解析为currentnamespace\foo
+	
+	$a = new subnamespace\foo();
+	如果当前的命名空间是 currentnamespace，则 foo 会被解析为 currentnamespace\subnamespace\foo
+
+	$a = new \currentnamespace\foo()
+	这种情况下，foo 总是被解析为currentnamespace\foo
+	
+使用命名空间:别名/导入
+	namespace foo;
+	use My\Full\Classname as Another;
+	use My\Full\Classname as Another, My\Full\NSname;
+	
+导入和完成限定名称
+	use My\Full\Classname as Another, My\Full\NSname;
+
+	$obj = new Another; // 实例化 My\Full\Classname 类
+	$obj = new \Another; // 实例化 Another 类
+	$obj = new Another\thing; // 实例化 My\Full\Classname\thing 类
+	$obj = new \Another\thing; // 实例化 Another\thing 类

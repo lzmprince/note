@@ -1,0 +1,47 @@
+1.构建基本路由
+	Route::get('foo',function(){
+		return 'Hello world';
+	});
+	
+2.路由文件
+	在routes目录中的路由文件中定义，这些文件由框架自动加载
+	routes/web.php 文件用于定义web界面的路由，提供了会话状态和CSRF保护功能
+	routes/api.php 中的路由都是无状态的
+	
+3.路由的访问
+	localhost/user访问路由 
+	Route::get('/user',UserController@index);
+	
+4.注册一个可相应多个HTTP请求的路由
+	Route::match(['get','post'],'/',function(){
+	
+	});
+	
+	Route::any('foo',function(){
+	
+	});
+	
+	match和any都可以允许多种http请求的方式访问对应的方法或者必包。
+	不同点是any是允许所有的请求，
+	match需要自己规定允许请求的内容
+	
+	
+5.重定向路由
+	Route::redirect('/here','/there');
+	默认会返回状态码302，可以通过第三参数自定义返回码
+	Route::redirect('/here','/there',301);
+	也可以通过Route::permanentRedirect('/here', '/there');来返回301状态码
+	
+6.视图路由
+	Router::view('/welcome','welcome',['name'=>'Taylor']);
+	第一个参数:URL
+	第二个参数:视图名称
+	第三个参数：选填，可传入一个数组，数组中的数据会被传递给视图
+
+	
+
+
+
+
+
+	

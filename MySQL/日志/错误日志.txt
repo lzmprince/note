@@ -1,0 +1,12 @@
+错误日志的开启
+	MySQL中，错误日志功能是默认开启的
+
+错误日志的存储位置及名称
+	存储在mysql数据库的数据目录中,通常的名称为hostname.err
+
+错误日志的配置
+	log_error	定义是否启用错误日志功能和错误日志的存储位置
+	log_warnings 定义是否将警告信息也定义到错误日志中
+	
+查看错误日志信息
+	show global variables like '%log_error%';

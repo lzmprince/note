@@ -1,0 +1,38 @@
+1.概念
+	视图是MySQL的一种虚拟表，只存储一个结构，
+	并不存储真实的数据，数据在查询过程中自动生成.
+
+2.创建视图
+	create VIEW user_veiw as select id,user from `user`;
+	
+3.删除视图
+	DROP VIEW user_view;
+	
+4.查看所有视图
+	show table status where comment='view';
+	
+3.查看视图
+	和表一样，可以用desc 视图名  来查看视图的每一列
+	desc user_veiw;
+
+4.查看创建的视图语法
+	show create view user_view;
+	
+5.查看视图的内容
+	select * from user_view;
+	
+6.视图的优点
+	提高了重用性，就像一个函数
+	对数据库重构，却不影响程序的运行
+	提高了安全性，权限无法细化到某一个列
+
+7.视图的缺点
+	表结构修改则需要手动修改视图
+	有时候会降低查询的效率
+	
+8.插入的数据必须满足视图的条件时，才允许操作
+	with check option
+	create view user_view as select id,user_name,status from `user` 
+	where status=0 with check option;
+	默认情况下，插入操作不受status这个条件影响，只是查询视图时受status影响，
+	添加上with check option后插入操作也需要满足status这个条件(修改不受影响)，否则会报错

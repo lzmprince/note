@@ -1,2 +1,0 @@
-docker create 创建一个新的容器但不启动它
-语法同 docker run

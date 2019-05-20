@@ -1,0 +1,35 @@
+1.代码必须使用4个空格符的TAB键进行缩进
+2.每行字符应该保持在80个之内,理论上不可多余120个，但不做硬性限制
+3.每个namespace命名空间生命语句和use生命语句块后面必须插入一个空白行
+4.类的开始花括号必须写在类申明后自成一行，结束花括号也必须自成一行
+5.方法的开始和结束花括号也必须自成一行
+6.类的属性和方法 必须 添加访问修饰符（private、protected 以及 public），abstract 
+以及 final 必须 声明在访问修饰符之前，而 static 必须 声明在访问修饰符之后
+
+7.控制结构的关键字后 必须 要有一个空格符，而调用方法或函数时则 一定不可 有。
+8.控制结构的开始花括号（{） 必须 写在声明的同一行，而结束花括号（}） 必须 写在主体后自成一行。
+9.控制结构的开始圆括号（(）后和结束圆括号（)）前，都 一定不可 有空格符。
+
+
+实例
+<?php
+namespace Vendor\Package;
+
+use FooClass;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+
+abstract class ClassName
+{
+    protected static $foo;
+	
+    abstract protected function zim();
+    
+	final public static function bar()
+    {
+        while ($expr) {
+			
+		}
+    }
+}

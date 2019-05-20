@@ -1,0 +1,52 @@
+0.申明语句结束符
+	delimiter $$
+
+1.创建存储过程
+create procedure 存储过程名(参数列表)
+begin
+	存储过程体
+end
+
+2.执行存储过程
+call 存储过程名(参数列表)
+
+3.删除存储过程
+drop procedure 存储过程名
+
+4.实例
+drop procedure user_prodecure_out;
+create procedure user_prodecure_out(in x int,out y varchar(10))
+begin
+	select user_name into y from `user` where id=x;
+end
+
+5.定义变量
+declare 变量名 变量类型 [默认值]
+
+6.变量赋值
+set 变量名 = 表达式
+
+7.if的语法格式为:
+if 条件表达式 then 语句
+	[elseif 条件表达式 then 语句]
+	[else 语句]
+end if
+
+8.case的语法格式
+case 表达式
+	when 值 then 语句
+	when 值 then 语句
+	...
+	[else 语句]
+end case
+
+9.loop循环
+[标号:]loop循环
+	循环语句
+end loop [标号]
+
+10.while循环语句
+while a>100 do
+	循环语句
+end while
+

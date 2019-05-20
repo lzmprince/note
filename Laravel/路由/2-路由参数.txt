@@ -1,0 +1,72 @@
+1.必选参数
+	1.1 有时候需要在路由中捕获一些URL片段，例如从URL中捕获用户的ID，
+	可以通过定义路由参数来执行此操作:
+	Route::get('user/{id}',function($id){
+		return 'User '.$id;
+	});
+
+	1.2 也可以根据需要在路由中定义多个参数
+	Route::get('posts/{post}/comments/{comment}',function($postId,$commentId){
+
+	});
+	
+2.可选参数
+	Route::get('user/{name?}',function($name= null){
+	
+	});
+	
+3.正则表达式约束
+	可以使用路由实例上的where方法约束路由参数的格式，where方法接受参数名称和定义
+	参数应如何约束的正则表达式
+	Route::get('user/{name}',function($name){
+	
+	})->where('name','[A-Za-z]+');
+	
+	Route::get('user/{id}/{name}',function($id,$name){
+	
+	})->where(['id'=>'[0-9]+','name'=>'[a-z]+']);
+
+4.中间件
+Route::middleware(['first','second'])->group(function(){
+	Route::get('/',function(){
+		//使用first和second中间件
+	});
+	
+	Route::get('user/profile',function(){
+		//使用first和second中间件
+	});
+});
+
+5.命名空间
+	使用namespace方法将相同的PHP命名空间分配给路由组中的所有的控制器
+	Route::namespace('Amin')->group(function(){
+		//在"App\Http\Controllers\Admin"命名空间下的控制器
+	});
+
+6.子域名路由
+	路由组可以用来处理子域名，子域名可以像路由URL一样被分配路由参数
+	Route::domain('{account}.myapp.com')->group(function(){
+		Route::get('user/{id}',function($account,$id){
+			
+		});
+	});
+	
+7.路由前缀
+	可以用prefix方法为路由组中给定的URL增加前缀
+	例如:给组中所有路由的URL加上admin前缀
+	Route::prefix('admin')->group(function(){
+		Route::get('users',function(){
+			//匹配包含"/admin/users"的URL
+		});
+	});
+	
+8.路由名称前缀
+	Route::name('admin.')->group(function () {
+		Route::get('users', function () {
+			// 指定路由名为 "admin.users"...
+		})->name('users');
+	});
+
+
+
+

@@ -1,0 +1,5 @@
+redo
+undo
+
+通过innodb_log_griyo_home_dir选项来更改日志文件存放位置
+通过innodb_log_files_in_group选项来设置日志的数量

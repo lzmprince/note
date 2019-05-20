@@ -1,0 +1,16 @@
+全限定类名、命名空间前缀和根目录相对应的文件的路径
+
+全限定类名	\Zend\Acl 	
+命名空间前缀	Zend 	
+根目录	/usr/includes/Zend/ 	
+文件的路径	/usr/includes/Zend/Acl.php
+
+全限定类名		\Symfony\Core\Request 	
+命名空间前缀	Symfony\Core 	
+根目录			./vendor/Symfony/Core/ 	
+文件的路径		./vendor/Symfony/Core/Request.php
+
+全限定类名		\Aura\Web\Response\Status 	
+命名空间前缀	Aura\Web 	
+根目录			/path/to/aura-web/src/ 	
+文件的路径		/path/to/aura-web/src/Response/Status.php

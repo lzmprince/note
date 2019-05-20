@@ -1,0 +1,32 @@
+Centos下安装docker
+
+1、更新update到最新的版本
+yum  update 
+
+2、卸载老版本docker
+yum  remove docker  docker-common docker-selinux docker-engine
+
+3、安装需要的软件包
+yum install -y yum-utils  device-mapper-persistent-data lvm2
+
+4、设置yum源
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+
+5、查看docker版本
+yum list docker-ce --showduplicates|sort -r  
+
+6、安装docker
+yum install docker-ce-18.03.1.ce -y
+
+7、启动docker
+systemctl start docker
+
+8、加入开机自启
+systemctl enable docker
+
+9、配置国内镜像
+vi /etc/docker/daemon.json
+	 
+{
+    "registry-mirrors": ["http://hub-mirror.c.163.com"]
+}
