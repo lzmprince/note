@@ -1,0 +1,33 @@
+Unix信号可以在文件/usr/include/sys/signal.h中查看
+
+#define SIGHUP  进程由於控制终端死去或者控制终端发出起命令 
+#define SIGINT  键盘中断所产生的信号 
+#define SIGQUIT  键盘终止 
+#define SIGILL  非法的指令 
+#define SIGTRAP   进程遇到一个追踪(trace)或者是一个中断嵌套 
+#define SIGABRT  由abort系统调用所产生的中断信号 
+#define SIGIOT  类似於SIGABRT 
+#define SIGBUS   进程试图使用不合理的记忆体 
+#define SIGFPE  浮点异常 
+#define SIGKILL  KILL 
+#define SIGUSR1  用户自定义 
+#define SIGSEGV  段错误 
+#define SIGUSR2  用户自定义 
+#define SIGPIPE  管道操作时没有读只写 
+#define SIGALRM 由alarm系统调用产生的timer时钟信号 
+#define SIGTERM 收到终端信号的进程 
+#define SIGSTKFLT 堆叠错误 
+#define SIGCHLD  子进程向父进程发出的子进程已经stop或者终止的信号 
+#define SIGCONT  继续运行的信号 
+#define SIGSTOP  stop 
+#define SIGTSTP  键盘所产生的stop信号 
+#define SIGTTIN   当运行在後状态时却需要读取stdin的资料 
+#define SIGTTOU   当运行在後状态时却需要写向stdout 
+#define SIGURG   socket的紧急情况 
+#define SIGXCPU  进程超额使用CPU分配的时间 
+#define SIGXFSZ  进程使用了超出系统规定文件长度的文件 
+#define SIGVTALRM  内部的alarm时钟过期 
+#define SIGPROF  在一个程式段中描绘时钟集过期 
+#define SIGWINCH 终端视窗的改变 
+#define SIGIO 非同步IO 
+#define SIGPOLL  SIGIO pollable事件发生
