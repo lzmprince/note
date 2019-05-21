@@ -1,0 +1,9 @@
+SESSION:存储用户信息的全局变量，实在服务器端的预处理数组
+存放的地方由php中的session_dir指定
+可通过时间设置生存长短，默认情况下session是基于cookie的
+
+关闭cookie,使用session的方法
+1. 设置php.ini配置文件中的“session.use_trans_sid = 1”，
+	或者编译时打开打开了“--enable-trans-sid”选项，让PHP自动跨页传递Session ID。
+2. 手动通过URL传值、隐藏表单传递Session ID。
+3. 用文件、数据库等形式保存Session ID，在跨页过程中手动调用。
