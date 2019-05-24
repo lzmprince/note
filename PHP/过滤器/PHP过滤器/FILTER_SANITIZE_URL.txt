@@ -1,0 +1,17 @@
+定义和用法
+
+FILTER_SANITIZE_URL 过滤器删除字符串中所有非法的 URL 字符。
+
+该过滤器允许所有的字母、数字以及 $-_.+!*'(),{}|\^~[]`"><#%;/?:@&=
+    Name: "url"
+    ID-number: 518
+
+实例
+<?php
+$var="http://www.w3cschooåøl.cøc";
+
+var_dump(filter_var($var, FILTER_SANITIZE_URL));
+?>
+
+代码的输出如下所示：
+string(24) "http://www.w3cschool.cc" 

@@ -1,0 +1,45 @@
+定义和用法
+FILTER_VALIDATE_URL 过滤器把值作为 URL 来验证。
+    Name: "validate_url"
+    ID-number: 273
+
+可能的标志：
+    FILTER_FLAG_SCHEME_REQUIRED - 要求 URL 是 RFC 兼容 URL（比如 http://example）
+    FILTER_FLAG_HOST_REQUIRED - 要求 URL 包含主机名（比如 http://www.example.com）
+    FILTER_FLAG_PATH_REQUIRED - 要求 URL 在域名后存在路径（比如 www.example.com/example1/test2/）
+    FILTER_FLAG_QUERY_REQUIRED - 要求 URL 存在查询字符串（比如 "example.php?name=Peter&age=37"）
+
+实例 1
+<?php
+$url = "http://www.example.com";
+
+if(!filter_var($url, FILTER_VALIDATE_URL))
+{
+echo "URL is not valid";
+}
+else
+{
+echo "URL is valid";
+}
+?>
+
+代码的输出如下所示：
+URL is valid 
+
+
+实例 2
+<?php
+$url = "example.php?name=Peter&age=37";
+
+if(!filter_var($url, FILTER_VALIDATE_URL,
+FILTER_FLAG_QUERY_REQUIRED))
+{
+echo "URL is not valid";
+}
+else
+{
+echo "URL is valid";
+}
+?>
+代码的输出如下所示：
+URL is valid 

@@ -1,0 +1,13 @@
+FILTER_CALLBACK
+	过滤器调用用户自定义函数来过滤数据
+	指定的函数必须存入名为 "options" 的关联数组中
+	
+实例:
+<?php
+	function convertSpace($string)
+	{
+		return str_replace(" ", "_", $string);
+	}
+	$string = "Peter is a great guy!";
+	echo filter_var($string, FILTER_CALLBACK,array("options"=>"convertSpace"));
+?>

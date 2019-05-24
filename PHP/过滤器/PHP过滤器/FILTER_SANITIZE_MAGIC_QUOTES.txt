@@ -1,0 +1,23 @@
+FILTER_SANITIZE_MAGIC_QUOTES 过滤器对字符串执行 addslashes() 函数。
+该过滤器在预定义的字符串前面设置反斜杠。
+
+预定义字符是：
+    单引号(')
+    双引号 (")
+    反斜线 (\)
+    NULL
+
+FILTER_SANITIZE_MAGIC_QUOTES 信息：
+    Name: "magic_quotes"
+    ID-number: 521
+
+实例
+<?php
+$var="Peter's here!";
+ 
+var_dump(filter_var($var, FILTER_SANITIZE_MAGIC_QUOTES));
+?>
+
+代码的输出如下所示：
+
+string(14) "Peter\'s here!"

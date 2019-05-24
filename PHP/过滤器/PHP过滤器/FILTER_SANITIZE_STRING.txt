@@ -1,0 +1,8 @@
+FILTER_SANITIZE_STRING 过滤器去除或编码不需要的字符
+可能的选项或标志：
+    FILTER_FLAG_NO_ENCODE_QUOTES - 该标志不编码引号
+    FILTER_FLAG_STRIP_LOW - 去除 ASCII 值在 32 以下的字符
+    FILTER_FLAG_STRIP_HIGH - 去除 ASCII 值在 127 以上的字符
+    FILTER_FLAG_ENCODE_LOW - 编码 ASCII 值在 32 以下的字符
+    FILTER_FLAG_ENCODE_HIGH - 编码 ASCII 值在 127 以上的字符
+    FILTER_FLAG_ENCODE_AMP - 把 & 字符编码为 &amp;

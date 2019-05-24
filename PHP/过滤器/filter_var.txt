@@ -1,0 +1,4 @@
+filter_var(variable, filter,options)	通过一个指定的过滤器来过滤单一的变量
+	variable：必需。规定要过滤的变量。
+	filter：可选。规定要使用的过滤器
+	options:可选，选项和标记

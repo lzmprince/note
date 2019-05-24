@@ -1,0 +1,15 @@
+定义和用法
+FILTER_VALIDATE_FLOAT 过滤器把值作为浮点数来验证。
+
+    Name: "float"
+    ID-number: 259
+
+实例
+<?php
+$var=12.3;
+
+var_dump(filter_var($var, FILTER_VALIDATE_FLOAT));
+?>
+
+代码的输出如下所示：
+float(12.3) 

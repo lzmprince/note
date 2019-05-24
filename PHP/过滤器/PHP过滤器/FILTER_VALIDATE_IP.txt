@@ -1,0 +1,36 @@
+定义和用法
+FILTER_VALIDATE_IP filter 过滤器把值作为 IP 地址来验证。
+    Name: "validate_ip"
+    ID-number: 275
+
+可能的标志：
+    FILTER_FLAG_IPV4 - 要求值是合法的 IPv4 IP（比如 255.255.255.255）。
+    FILTER_FLAG_IPV6 - 要求值是合法的 IPv6 IP（比如 2001:0db8:85a3:08d3:1319:8a2e:0370:7334）。
+    FILTER_FLAG_NO_PRIV_RANGE - 要求值不在 RFC 指定的私有范围 IP 内（比如 192.168.0.1）。
+    FILTER_FLAG_NO_RES_RANGE - 要求值不在保留的 IP 范围内。该标志接受 IPV4 和 IPV6 值。
+
+实例 1
+<?php
+$ip = "192.168.0.1";
+if(!filter_var($ip, FILTER_VALIDATE_IP)){
+	echo "IP is not valid";
+}else{
+	echo "IP is valid";
+}
+?>
+
+代码的输出如下所示：
+IP is valid
+
+实例 2
+<?php
+$ip = "2001:0db8:85a3:08d3:1319:8a2e:0370:7334";
+if(!filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)){
+	echo "IP is not valid";
+}else{
+	echo "IP is valid";
+}
+?>
+
+代码的输出如下所示：
+IP is valid 

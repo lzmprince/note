@@ -1,0 +1,17 @@
+定义和用法
+FILTER_VALIDATE_EMAIL 过滤器把值作为 e-mail 地址来验证。
+    Name: "validate_email"
+    ID-number: 274
+
+实例
+<?php
+$email = "someone@exa mple.com";
+if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+	echo "E-mail is not valid";
+}else{
+	echo "E-mail is valid";
+}
+?>
+
+代码的输出如下所示：
+E-mail is not valid 

@@ -1,0 +1,18 @@
+定义和用法
+
+FILTER_SANITIZE_NUMBER_INT 过滤器删除数字中所有非法的字符。
+
+该过滤器允许所有数字以及 . + -
+
+    Name: "number_int"
+    ID-number: 519
+
+实例
+<?php
+$number="5-2+3pp";
+
+var_dump(filter_var($number, FILTER_SANITIZE_NUMBER_INT));
+?>
+
+代码的输出如下所示：
+string(5) "5-2+3" 

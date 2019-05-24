@@ -1,0 +1,18 @@
+定义和用法
+FILTER_VALIDATE_REGEXP 过滤器根据兼容 Perl 的正则表达式来验证值。
+    Name: "validate_regexp"
+    ID-number: 272
+
+可能的选项：
+    regexp - 规定验证所依据的正则表达式
+
+实例
+<?php
+$string = "Match this string";
+
+var_dump(filter_var($string, FILTER_VALIDATE_REGEXP,
+array("options"=>array("regexp"=>"/^M(.*)/"))))
+?>
+
+代码的输出如下所示：
+string(17) "Match this string" 

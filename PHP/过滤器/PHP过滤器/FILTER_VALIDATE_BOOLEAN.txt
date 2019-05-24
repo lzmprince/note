@@ -1,0 +1,21 @@
+定义和用法
+FILTER_VALIDATE_BOOLEAN 过滤器把值作为布尔选项来验证。
+
+    Name: "boolean"
+    ID-number: 258
+
+可能的返回值：
+
+    如果是 "1"、"true"、"on" 和 "yes"，则返回 TRUE。
+    如果是 "0"、"false"、"off" 和 "no"，则返回 FALSE。
+    否则返回 NULL。
+
+实例
+<?php
+$var="yes";
+
+var_dump(filter_var($var, FILTER_VALIDATE_BOOLEAN));
+?>
+
+代码的输出如下所示：
+bool(true) 

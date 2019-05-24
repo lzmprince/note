@@ -1,0 +1,9 @@
+FILTER_SANITIZE_SPECIAL_CHARS 过滤器对特殊字符进行 HTML 转义。
+该过滤器用于转义 "<>& 以及 ASCII 值在 32 值以下的字符。
+    Name: "special_chars"
+    ID-number: 515
+
+可能的标志：
+    FILTER_FLAG_STRIP_LOW - 去除 ASCII 值在 32 以下的字符
+    FILTER_FLAG_STRIP_HIGH - 去除 ASCII 值在 32 以上的字符
+    FILTER_FLAG_ENCODE_HIGH - 编码 ASCII 值在 32 以上的字符
