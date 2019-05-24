@@ -35,3 +35,7 @@ echarts
 
 consul
 rpc
+
+
+
+Jenkins		主要用于持续、自动的构建/测试软件项目、监控外部任务的运行
