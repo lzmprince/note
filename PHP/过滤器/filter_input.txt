@@ -1,0 +1,34 @@
+filter_input
+	获取一个输入变量，并对它进行过滤
+	
+本函数可从各种来源获取输入：
+    INPUT_GET
+    INPUT_POST
+    INPUT_COOKIE
+    INPUT_ENV
+    INPUT_SERVER
+    INPUT_SESSION (Not yet implemented)
+    INPUT_REQUEST (Not yet implemented)
+
+如果成功，则返回被过滤的数据，如果失败，则返回 false，如果 variable 参数未设置，则返回 NULL。
+语法
+filter_input(input_type, variable, filter, options)
+
+参数 	描述
+input_type 	必需。规定输入类型。参见上面的列表中可能的类型。
+variable 	规定要过滤的变量。
+filter 		可选。规定要使用的过滤器的 ID。默认是 FILTER_SANITIZE_STRING。
+
+	
+例子
+在本例中，我们使用 filter_input() 函数来过滤一个 POST 变量。所接受的 POST 变量是合法的 e-mail 地址。
+<?php
+if (!filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL))
+ {
+ echo "E-Mail is not valid";
+ }
+else
+ {
+ echo "E-Mail is valid";
+ }
+?>

@@ -1,0 +1,19 @@
+__CLASS__
+	返回该类被定义时的名字
+	
+实例
+	<?php
+	class test {
+		function _print() {
+			echo '类名为：'  . __CLASS__ . "<br>";
+			echo  '函数名为：' . __FUNCTION__ ;
+		}
+	}
+	$t = new test();
+	$t->_print();
+	?>
+
+	
+以上实例输出结果为：
+	类名为：test
+	函数名为：_print

@@ -2,3 +2,17 @@ filter_var(variable, filter,options)	通过一个指定的过滤器来过滤单�
 	variable：必需。规定要过滤的变量。
 	filter：可选。规定要使用的过滤器
 	options:可选，选项和标记
+	
+实例
+	<?php
+	$int = 123;
+	 
+	if(!filter_var($int, FILTER_VALIDATE_INT))
+	{
+		echo("不是一个合法的整数");
+	}
+	else
+	{
+		echo("是个合法的整数");
+	}
+	?>
